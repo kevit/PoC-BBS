@@ -5,6 +5,13 @@ import random
 import string
 import docker
 
+import logging
+
+handler = logging.StreamHandler()
+root_logger = logging.getLogger('')
+root_logger.setLevel(logging.DEBUG)
+root_logger.addHandler(handler)
+
 app = Flask(__name__)
 
 ports = ['4200','4201','4202']
